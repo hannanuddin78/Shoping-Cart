@@ -101,6 +101,12 @@
          calculatorTotal();
       }
 
+      function getInputValue(product) {
+         const productInput = document.getElementById(product + '-count');
+         const productCount = parseInt(productInput.value);
+         return productCount;
+      }
+
       function calculatorTotal() {
          const phoneCount = getInputValue('phone')
          const caseCount = getInputValue('case')
@@ -113,12 +119,6 @@
 
          const  allTotal = subTotalPrice + tax ;
          document.getElementById('allTotal').innerText = '$' + allTotal;
-      }
-
-      function getInputValue(product) {
-         const productInput = document.getElementById(product + '-count');
-         const productCount = parseInt(productInput.value);
-         return productCount;
       }
 
       function removeBtnAreaOne() {
